@@ -1,0 +1,59 @@
+#motto
+{
+    text-align: right; 
+    color: #009900;
+}
+#top-menu-bar
+{
+    text-align: center;
+    background-color: #334455;
+    color: #fff;
+    margin 0;
+    padding 0;
+}
+#top-menu-bar li
+{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+#top-menu-bar a
+{
+    text-decoration: none;
+    padding: 0 15px 0 15px;
+    color: white;
+}
+#top-menu-bar a:visited
+{
+    color: white;
+}
+#top-menu-bar a:hover
+{
+    color: #334455;
+    background: white;
+}
+.page {
+    background-color: white;
+    border: 1px solid #e0dfdc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+.page h3 {
+    margin: 0 0 5px 0;
+}
+.page ul {
+    margin: 0 0 5px 0;
+    padding-left: 20px;
+}
+.favorit {
+    color: rgb(190, 23, 23);
+    font-weight: bold;
+    font-style: italic;
+}
+td
+{
+    padding: 3px 10px;
+    color: darkblue;
+}
