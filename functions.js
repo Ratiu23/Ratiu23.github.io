@@ -1,33 +1,23 @@
- function hidePage(id) {
+ function hide(id) {
     document.getElementById(id).style.display='none';
  }
- function showPage(id) {
+ function show(id) {
     document.getElementById(id).style.display='block';
  }
  function hideAllPages() {
     var pages = Array.from(document.getElementsByClassName('page'));
     pages.forEach(function(page){
-        hidePage(page.id);
+        hide(page.id);
 
     });
    /* var pageIds=["home", "skills", "projects", "languages"];
     pageIds.forEach(function(pageId, index){
-        hidePage(pageId);
+        hide(pageId);
     });*/
  }
- function showHome() {
-    hideAllPages()
-    showPage('home');
+function showPage(id) {
+    hideAllPages();
+    show(id);
 }
- function showSkills() {
-    hideAllPages()
-    showPage('skills');
-}
-function showProjects() {
-    hideAllPages()
-    showPage('projects');
-}
-function showLanguages() {
-    hideAllPages()
-    showPage('languages');
-}
+
+show("home");
