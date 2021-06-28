@@ -8,9 +8,9 @@
  }
  function hideAllPages() {
     var pageIds=["home", "skills", "projects", "languages"];
-    for (var i=0; i<pageIds.length; i++) {
-        hidePage(pageIds[i]);
-    }
+    pageIds.forEach(function(pageId, index){
+        hidePage(pageId);
+    });
  }
  function showHome() {
     hideAllPages()
