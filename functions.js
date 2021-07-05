@@ -2,7 +2,16 @@
     document.getElementById(id).style.display='none';
  }
  function show(id) {
+    var page=document.getElementById(id);
+    if (page) {
     document.getElementById(id).style.display='block';
+    highlight(page);
+    }
+    var oldLINK= document.querySelector("a[data-page].active");
+    if (oldLINK)
+    oldLINK.classList.remove("active");
+    var link=document.querySelector(`a[data-page= ${id} ]`);
+    link.classList.add("active");
  }
  function highlight(el) {
   //var oldBorderColor = el.style.borderColor;
@@ -22,11 +31,6 @@
     var pages = Array.from(document.getElementsByClassName('page'));
     pages.forEach(function(page){
         hide(page.id);
-        if (page) {
-          highlight(page);
-        } else {
-    console.warn("pagina cu id-ul %o nu exista", id);
-  }
     });
    /* var pageIds=["home", "skills", "projects", "languages"];
     pageIds.forEach(function(pageId, index){
