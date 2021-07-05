@@ -22,7 +22,11 @@
     var pages = Array.from(document.getElementsByClassName('page'));
     pages.forEach(function(page){
         hide(page.id);
-
+        if (page) {
+          highlight(page);
+        } else {
+    console.warn("pagina cu id-ul %o nu exista", id);
+  }
     });
    /* var pageIds=["home", "skills", "projects", "languages"];
     pageIds.forEach(function(pageId, index){
@@ -35,3 +39,12 @@ function showPage(id) {
 }
 
 show("home");
+
+
+document.querySelector('#top-menu-bar').addEventListener("click", function(e){
+  if (e.target.matches("a")) {
+    var id=e.target.getAttribute('data-page');
+    showPage(id);
+    highlight(e.target);
+  }
+})
