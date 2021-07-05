@@ -54,11 +54,18 @@ document.querySelector('#top-menu-bar').addEventListener("click", function(e){
 })
 
 
-var skills= ["html", "js", "css"];
+var skills= [
+  {name:"html", favorit: true}, 
+  {name: "js" },
+  {name: "css", favorit: true}
+];
 
 var skillsHtml= skills.map(function(skill){
   console.info(skill);
-  return `<li>${skill}</li>`;
+  if (skill.favorit) {
+    return `<li class="favorit">${skill.name}</li>`;
+  }
+  return(`<li>${skill.name}</li>`);
 }).join('');
 
 document.querySelector("#skills ul").innerHTML= skillsHtml;
