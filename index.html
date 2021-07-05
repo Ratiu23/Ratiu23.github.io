@@ -9,9 +9,10 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 	<header>
 	<div id="header-wraper">
-		<div id="my picture">
+		<div id="my-picture">
 			<img src="me.jpg" alt="Poza mea"  width="100" >
 
 		</div>
@@ -21,12 +22,13 @@
 		</div>
 	</div>	
 	<ul id="top-menu-bar">
-	  <li><a href="#" onclick="showPage('home')">Home</a></li>
-	  <li><a href="#" onclick="showPage('skills')">Skills</a></li>
-	  <li><a href="#" onclick="showPage('projects')">Projects</a></li>
-	  <li><a href="#" onclick="showPage('languages')">Languages</a></li>
+	  <li><a href="#" onclick="showPage('home'); highlight(this)">Home</a></li>
+	  <li><a href="#" onclick="showPage('skills'); highlight(this)">Skills</a></li>
+	  <li><a href="#" onclick="showPage('projects'); highlight(this)">Projects</a></li>
+	  <li><a href="#" onclick="showPage('languages'); highlight(this)">Languages</a></li>
 	</ul>
     </header>
+
     <section id="content">
         <div id="side-menu">
             <section>
