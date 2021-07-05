@@ -80,6 +80,11 @@ h1 {
     font-weight: bold;
     font-style: italic;
 }
+#skills li span {
+    font-weight: normal;
+    color: grey;
+    font-style: normal;
+}
 td
 {
     padding: 3px 10px;
