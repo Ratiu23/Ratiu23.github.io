@@ -10,11 +10,16 @@
 </head>
 <body>
 	<header>
-	
-	<h1>CV</h1>
-    <h2> Alex-Cristian Ratiu</h2>
-	<img src="me.jpg" alt="Poza mea"  width="100" >
-	<p id="motto" ><strong>Student la Facultatea de <i>Inginerie Electrica</i></strong></p>
+	<div id="header-wraper">
+		<div id="my picture">
+			<img src="me.jpg" alt="Poza mea"  width="100" >
+
+		</div>
+		<div id="header-info">
+			<h1 >Alex-Cristian Ratiu</h1>
+    		<h2 id="job-title">Student la Facultatea de Inginerie Electrica</h2>
+		</div>
+	</div>	
 	<ul id="top-menu-bar">
 	  <li><a href="#" onclick="showPage('home')">Home</a></li>
 	  <li><a href="#" onclick="showPage('skills')">Skills</a></li>
@@ -68,10 +73,8 @@
         </div>
     </section>
     <footer>
-        <p style="text-align: center; color: blue;">
 			<a href="https://fasttrackit.org/">FastTrack IT</a>
 			@ 2021
-		</p>
     </footer>	
 <script src="functions.js">
 </script>
