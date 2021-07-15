@@ -67,10 +67,30 @@ function showSkills(skills){
 
 }
 
+function sortSkillsByName(a, b) {
+
+  var aName= a.name.toUpperCase();
+  var bName= b.name.toUpperCase();
+  if (aName < bName) {
+    return -1;
+  }
+  if (aName > bName) {
+    return 1;
+  }
+  return 0;
+};
+
+
+function sortSkillsByEndoesements(a, b) {
+  console.info(a.name, b.name, a.endorsements, b.endorsements);
+  return b.endorsements - a.endorsements;
+}
+
 fetch("data/skills.json").then(function(response) {
   
   return response.json();
 }).then(function(skills){
+  skills.sort(sortSkillsByEndoesements);
   window.skills = skills;
   showSkills(skills);
   
