@@ -83,6 +83,7 @@ function collectFristNames(employees) {
     }
     var firstNames = employees.map(function (employee){
         return `${employee.firstName}`;
-    }).join('');
+    })
+    return firstNames;
 }
-collectFristNames(employees);
+console.info(collectFristNames(employees));
