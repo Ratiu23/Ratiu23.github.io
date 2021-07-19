@@ -29,13 +29,7 @@
 }
  function hideAllPages() {
     const pages = Array.from(document.getElementsByClassName('page'));
-    pages.forEach( page => {
-        hide(page.id);
-    });
-   /* var pageIds=["home", "skills", "projects", "languages"];
-    pageIds.forEach(function(pageId, index){
-        hide(pageId);
-    });*/
+    pages.forEach( page => hide(page.id));
  }
 function showPage(id) {
     hideAllPages();
@@ -86,10 +80,9 @@ function sortSkillsByEndoesements(a, b) {
   return b.endorsements - a.endorsements;
 }
 
-fetch("data/skills.json").then( response => {
-  
-  return response.json();
-}).then( skills => {
+fetch("data/skills.json")
+.then( response => response.json())
+.then( skills => {
   skills.sort(sortSkillsByEndoesements);
   window.skills = skills;
   showSkills(skills);
