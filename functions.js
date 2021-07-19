@@ -61,7 +61,7 @@ function showSkills(skills){
 
 }
 
-function sortSkillsByName(a, b) {
+const sortSkillsByName= (a, b) => {
 
   const aName= a.name.toUpperCase();
   const bName= b.name.toUpperCase();
@@ -75,7 +75,7 @@ function sortSkillsByName(a, b) {
 };
 
 
-function sortSkillsByEndoesements(a, b) {
+const sortSkillsByEndoesements= (a, b) => {
   console.info(a.name, b.name, a.endorsements, b.endorsements);
   return b.endorsements - a.endorsements;
 }
