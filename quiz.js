@@ -87,3 +87,42 @@ function collectFristNames(employees) {
     return firstNames;
 }
 console.info(collectFristNames(employees));
+
+function calculateAverageSalary(employees) {
+    var sum = 0;
+    var i=0;
+    employees.forEach(function(employee, index) {
+        sum+=parseFloat(`${employee.salary}`);
+        i = index;
+    });
+    return sum/(i+1);
+}
+console.info(calculateAverageSalary(employees));
+
+function calculateAverageFemaleSalary(employees) {
+    var sum = 0;
+    var i=0;
+    employees.forEach(function(employee, index) {
+        if (`${employee.gender}`=="Female") {
+        sum+=parseFloat(`${employee.salary}`);
+        i+=1;
+        console.info(i);
+        }
+    });
+    return sum/i;
+}
+console.info(calculateAverageFemaleSalary(employees));
+
+function splitEmployees(employees) {
+    var f=[];
+    var m=[];
+    employees.forEach(function(employee, index) {
+        if (`${employee.gender}`=="Female") {
+        f.push(employee);
+        } else {
+            m.push(employee);
+        }
+    });
+    return {f,m};
+}
+console.info(splitEmployees(employees));
